@@ -1,3 +1,5 @@
+<?php require_once("scripts/script.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +16,12 @@
 
     <form class="container" action="index.php" method="post">
         <div class="mb-3">
-            <label for="phoneNumberInput" class="form-label ">Номер телефона</label>
-            <input type="tel" class="form-control" id="phoneNumberInput" name="phoneNumber">
-           
+            <label for="phoneNumberInput" class="form-label">Номер телефона</label>
+            <input type="tel" class="form-control w-25" id="phoneNumberInput" name="phoneNumber">
+
+            
         </div>
-        <input type="submit" class="btn btn-primary" value="Send"></button>
+        <input type="submit" class="btn btn-primary" value="Проверить"></button>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -31,28 +34,6 @@
 </body>
 
 
-<?php
-            $numbers = require 'Array_RegEx.php';
-            // require_once 'Array.php';
-            if (array_key_exists('phoneNumber', $_POST)) {
-                
-                $phoneNumber = $_POST["phoneNumber"];
-                $foundSomething = false;
-                foreach ($numbers as $arr) {
-                    if (preg_match("/" . $arr["mask"] . "/i", $phoneNumber)) {
-                        echo $arr["name_ru"];
-                        $foundSomething = true;
-                        break;
-                    }
-                }
-                if (!$foundSomething) {
-                    echo "No matches found";
-                }
-            }
-            ?>
+
 
 </html>
-
-<!-- \+376 ?(\(?\d{1,3}\)?)?[\- ]?\d\d\d[\- ]?\d\d\d
-\+?375 ?(\(?\d{1,3}\)?)?[\- ]?\d\d\d[\- ]?\d*
- -->

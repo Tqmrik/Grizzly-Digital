@@ -1,4 +1,4 @@
-
+<?php
 $numbers = [
 	array( "mask"=> "+247-####", "cc"=> "AC", "name_en"=> "Ascension", "desc_en"=> "", "name_ru"=> "Остров Вознесения", "desc_ru"=> "" ),
 	array( "mask"=> "+376-###-###", "cc"=> "AD", "name_en"=> "Andorra", "desc_en"=> "", "name_ru"=> "Андорра", "desc_ru"=> "" ),
@@ -295,3 +295,4 @@ $numbers = [
 	array( "mask"=> "+263-#-######", "cc"=> "ZW", "name_en"=> "Zimbabwe", "desc_en"=> "", "name_ru"=> "Зимбабве", "desc_ru"=> "" ),
 	array( "mask"=> "+1(###)###-####", "cc"=> ["US", "CA"], "name_en"=> "USA and Canada", "desc_en"=> "", "name_ru"=> "США и Канада", "desc_ru"=> "" )
 ]
+?>

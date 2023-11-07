@@ -32,7 +32,7 @@
 
 
 <?php
-            $numbers = require 'Array_copy2.php';
+            $numbers = require 'Array_RegEx.php';
             // require_once 'Array.php';
             if (array_key_exists('phoneNumber', $_POST)) {
                 
@@ -42,6 +42,7 @@
                     if (preg_match("/" . $arr["mask"] . "/i", $phoneNumber)) {
                         echo $arr["name_ru"];
                         $foundSomething = true;
+                        break;
                     }
                 }
                 if (!$foundSomething) {
@@ -51,3 +52,7 @@
             ?>
 
 </html>
+
+<!-- \+376 ?(\(?\d{1,3}\)?)?[\- ]?\d\d\d[\- ]?\d\d\d
+\+?375 ?(\(?\d{1,3}\)?)?[\- ]?\d\d\d[\- ]?\d*
+ -->

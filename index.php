@@ -18,10 +18,8 @@
         <div class="mb-3">
             <label for="phoneNumberInput" class="form-label">Номер телефона</label>
             <input type="tel" class="form-control w-25" id="phoneNumberInput" name="phoneNumber">
-
-            
         </div>
-        <input type="submit" class="btn btn-primary" value="Проверить"></button>
+        <input type="submit" class="btn btn-primary" value="Проверить"></input>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -32,8 +30,14 @@
         crossorigin="anonymous"></script>
 
 </body>
-
-
-
-
 </html>
+
+
+<?php
+    require_once "CookiesPopUp.php";
+    
+    if(!array_key_exists('popupTimeInterval', $_COOKIE)){
+        require_once "CookiesPopUp.php";
+    }
+
+?>
